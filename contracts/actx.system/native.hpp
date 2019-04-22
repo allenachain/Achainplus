@@ -82,11 +82,11 @@ namespace eosiosystem {
           *     an amount equal to the current new account creation fee.
           */
          #if 0
-         //void newaccount( account_name     creator,
-         //                 account_name     newact
+         void newaccount( account_name     creator,
+                          account_name     newact
                           /*  no need to parse authorites
                           const authority& owner,
-         //                 const authority& active*/ );
+                          const authority& active*/ );
          #endif
 
          void updateauth( /*account_name     account,

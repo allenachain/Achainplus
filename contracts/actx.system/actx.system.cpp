@@ -16,7 +16,6 @@ namespace eosiosystem {
     _global(_self,_self),
     _rammarket(_self,_self)
    {
-      //print( "construct system\n" );
       _gstate = _global.exists() ? _global.get() : get_default_parameters();
 
       auto itr = _rammarket.find(S(4,RAMCORE));
@@ -34,7 +33,6 @@ namespace eosiosystem {
             });
          }
       } else {
-         //print( "ram market already created" );
       }
    }
 
@@ -46,9 +44,7 @@ namespace eosiosystem {
 
 
    system_contract::~system_contract() {
-      //print( "destruct system\n" );
       _global.set( _gstate, _self );
-      //eosio_exit(0);
    }
 
    void system_contract::setram( uint64_t max_ram_size ) {
